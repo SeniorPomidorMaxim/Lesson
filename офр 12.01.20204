@@ -1,0 +1,103 @@
+ОФР
+
+овтет на 1 задание
+
+let value = 10;
+
+// Выражения, результат выполнения которых будет равен true для value = 10
+console.log(value === 10);   // Строгое равенство
+console.log(value < 15);     // Меньше
+console.log(value >= 10);    // Больше или равно
+console.log(value !== 20);   // Не строгое неравенство
+console.log(value === 10 || value < 20);   // Логическое ИЛИ 
+
+овтет на 2 задание
+let userAge = prompt("Введите ваш возраст:");
+
+if (userAge < 18) {
+  alert("Access denied");
+} else {
+  alert("Access granted");
+}
+
+овтет на 3 задание
+
+let id = prompt('Введите id товара:');
+let quantity;
+
+switch (id) {
+  case '1':
+    quantity = 10;
+    break;
+  case '2':
+    quantity = 256;
+    break;
+  case '3':
+    quantity = 53;
+    break;
+  case '4':
+    quantity = 3;
+    break;
+  default:
+    quantity = 0;
+}
+
+овтет на 4 задание
+
+if (quantity > 0) {
+  alert('В наличии ' + quantity + ' шт.');
+} else {
+  alert('Нет в наличии');
+}
+
+let userGender = prompt('Введите ваш пол (M или F):');
+let gender;
+
+switch (userGender.toUpperCase()) {
+  case 'M':
+    gender = 'male';
+    break;
+  case 'F':
+    gender = 'female';
+    break;
+  default:
+    gender = 'unknown';
+    break;
+}
+
+alert('Ваш пол: ' + gender);
+
+овтет на 5 задание
+ let input = prompt('Введите три двузначных числа через запятую (например, 23, 45, 67):');
+let numbers = input.split(',').map(num => parseInt(num.trim(), 10));
+
+if (numbers.length === 3 && numbers.every(num => num >= 10 && num <= 99)) {
+  numbers.sort((a, b) => a - b);
+  
+  let middleNumber = numbers[1];
+  
+  if (numbers[0] === numbers[1] || numbers[1] === numbers[2]) {
+    console.log('Ошибка: Введены одинаковые числа.');
+  } else {
+    console.log('Среднее из введенных чисел: ' + middleNumber);
+  }
+} else {
+  console.log('Ошибка: Введите три двузначных числа, разделенных запятой.');
+}
+
+овтет на 6 задание
+ let monthNumber = prompt('Введите номер месяца (от 1 до 12):');
+monthNumber = parseInt(monthNumber, 10);
+
+if (monthNumber >= 1 && monthNumber <= 12) {
+  let monthNames = [
+    'Январь', 'Февраль', 'Март', 'Апрель',
+    'Май', 'Июнь', 'Июль', 'Август',
+    'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+  ];
+
+  let monthName = monthNames[monthNumber - 1];
+  console.log('Название месяца: ' + monthName);
+} else {
+  console.log('Ошибка: Введите корректный номер месяца (от 1 до 12).');
+}
